@@ -17,6 +17,34 @@ export const getCoffeeShops = () => {
   };
 };
 
+export const addItemToCart = item => {
+  return async dispatch => {
+    // dispatch(setCoffeeShopsLoading());
+    dispatch({
+      type: actionTypes.ADD_ITEM,
+      payload: item
+    });
+  };
+};
+
+export const removeItemFromCart = item => {
+  return async dispatch => {
+    // dispatch(setCoffeeShopsLoading());
+    dispatch({
+      type: actionTypes.REMOVE_ITEM,
+      payload: item
+    });
+  };
+};
+export const checkoutCart = () => {
+  return async dispatch => {
+    // dispatch(setCoffeeShopsLoading());
+    dispatch({
+      type: actionTypes.CHECKOUT
+    });
+  };
+};
+
 export const setCoffeeShopsLoading = () => ({
   type: actionTypes.COFFEESHOPS_LOADING
 });
